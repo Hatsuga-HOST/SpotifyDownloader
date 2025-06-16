@@ -1,0 +1,36 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+input, button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+input {
+    width: 300px;
+}
+button {
+    background-color: #1DB954;
+    color: white;
+    cursor: pointer;
+}
+img {
+    border-radius: 10px;
+    margin: 20px 0;
+}
+logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
