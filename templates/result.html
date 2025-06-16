@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Lagu</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .button-row form {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ image }}" width="200"><br>
+        <h2>{{ title }} – {{ artist }}</h2>
+
+        <div class="button-row">
+            <!-- Tombol MP3 -->
+            <form action="/download" method="POST">
+                <input type="hidden" name="query" value="{{ query }}">
+                <button type="submit">Download MP3</button>
+            </form>
+
+            <!-- Tombol Cover -->
+            <form action="/download-image" method="POST">
+                <input type="hidden" name="image_url" value="{{ image }}">
+                <input type="hidden" name="title" value="{{ title }}">
+                <button type="submit">Download Cover</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
